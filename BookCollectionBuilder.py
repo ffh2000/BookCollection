@@ -8,12 +8,15 @@ class BookCollectionBuilder:
 
     def add_book(self, book):
         self.books.append(book)
+        return self
 
     def set_theme(self, theme):
         self.theme = theme
+        return self
 
     def set_price(self, price):
         self.price = price
+        return self
 
     def build(self):
         return BookCollection(self.theme, self.books, self.price)
